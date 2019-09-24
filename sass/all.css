@@ -1,0 +1,249 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  list-style-type: none;
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 5px;
+  height: 2px;
+  background-color: #1572E8;
+}
+
+.sidebar .sidehead {
+  width: 250px;
+  height: 65px;
+  background-color: #1572E8;
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 14px;
+  position: fixed;
+  z-index: 1;
+  border-bottom: 1px solid rgba(202, 202, 202, 0.329);
+  border-right: 1px solid #fff;
+}
+
+.sidebar .sidehead .sideheadText {
+  text-align: left;
+  font-size: 25px;
+  margin: 25px 0 0 25px;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sidebar .sidehead .sidebarBtn {
+  text-align: right;
+  margin: 25px 20px 0 auto;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+.sidebar .sidehead .userBtn {
+  text-align: right;
+  margin: 25px 20px 0 auto;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+.sidebar .sidebody {
+  width: 250px;
+  height: 100vh;
+  min-height: 100%;
+  float: left;
+  background-color: #1572E8;
+  color: #fff;
+  overflow-y: auto;
+  display: block;
+  position: fixed;
+  border-right: 1px solid #fff;
+}
+
+.sidebar .sidebody .userContent {
+  border-top: 1px solid #fff;
+}
+
+.sidebar .sidebody .userContent .userBlock {
+  border-bottom: 1px solid rgba(202, 202, 202, 0.329);
+  margin-top: 75px;
+}
+
+.sidebar .sidebody .userContent .userBlock .userImgBlock {
+  float: left;
+  margin-left: 10px;
+}
+
+.sidebar .sidebody .userContent .userBlock .userImgBlock .userImg {
+  width: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.sidebar .sidebody .userContent .userBlock .userTextBlock {
+  margin-left: 50px;
+}
+
+.sidebar .sidebody .userContent .userBlock .userTextBlock .adminText {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sidebar .sidebody .userContent .userBlock .userTextBlock .userText {
+  margin-top: -8px;
+}
+
+.sidebar .sidebody .userContent .basicToggleBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 15px 10px 0 10px;
+}
+
+.sidebar .sidebody .userContent .basicToggleBlock:hover {
+  background-color: rgba(255, 255, 255, 0.247);
+}
+
+.sidebar .sidebody .userContent .basicToggleBlock .toggleIcon {
+  margin: auto auto auto 10px;
+}
+
+.sidebar .sidebody .userContent .basicToggleBlock .toggleIcon .basicIcon {
+  font-size: 18px;
+  margin-top: 3px;
+}
+
+.sidebar .sidebody .userContent .basicToggleBlock .toggleText {
+  font-size: 18px;
+  margin: auto auto auto -12px;
+}
+
+.sidebar .sidebody .userContent .basicToggleBlock .mL-9 {
+  margin-left: -9px;
+}
+
+.sidebar .sidebody .userContent .basicToggleBlock .downIcon {
+  line-height: 18px;
+  margin: auto;
+}
+
+.sidebar .sidebody .userContent .basicToggleBlock .downIconSet {
+  margin-left: 70px;
+}
+
+.sidebar .sidebody .toggleMenu {
+  text-align: center;
+  margin-left: auto;
+}
+
+.sidebar .sidebody .toggleMenu li {
+  margin: 0 10px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sidebar .sidebody .toggleMenu li:hover {
+  background-color: rgba(255, 255, 255, 0.247);
+}
+
+.contentBlock {
+  margin-left: 250px;
+}
+
+.contentBlock .rightImgBlock {
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 10px;
+  margin-bottom: 30px;
+}
+
+.contentBlock .rightImgBlock .rightImg {
+  width: 50px;
+  cursor: pointer;
+}
+
+.contentBlock footer {
+  font-size: 18px;
+  position: fixed;
+  right: 15px;
+  bottom: 20px;
+  color: #7B7B7B;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar .sidehead {
+    width: 100vw;
+    position: absolute;
+  }
+  .sidebar .sidehead .sideheadText {
+    margin: auto;
+  }
+  .sidebar .sidehead .sidebarBtn {
+    position: absolute;
+    left: 25px;
+    display: block;
+  }
+  .sidebar .sidehead .userBtn {
+    display: block;
+    position: absolute;
+    right: 5px;
+  }
+  .sidebar .sidebody {
+    padding-left: 0;
+    position: fixed;
+    margin-left: -250px;
+    float: left;
+  }
+  .sidebar .sidebody .toggled {
+    padding-left: 250px;
+  }
+  .sidebar .sidebody .userContent {
+    border: 0px;
+  }
+  .sidebar .sidebody .userContent .userBlock {
+    margin: 10px;
+  }
+  .contentBlock {
+    position: relative;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    top: 65px;
+    margin-left: 0px;
+  }
+  .contentBlock .rightImgBlock {
+    width: 100vw;
+    right: 0;
+    top: 0;
+    padding: 5px 0;
+    background-color: rgba(238, 238, 238, 0.7);
+    text-align: center;
+    display: none;
+  }
+  .contentBlock .rightImgBlock .rightImg {
+    width: 50px;
+  }
+}
+
+.rotate180 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.toggledHead {
+  margin-left: 250px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+/*# sourceMappingURL=all.css.map */

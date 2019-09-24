@@ -1,0 +1,226 @@
+$font-big: 35px;
+$font-mid: 25px;
+$font-small: 18px;
+$color-white: #fff;
+$color-blue: #1572E8;
+$color-gray:#7B7B7B;
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    // font-family: 'PingFang SC';
+    list-style-type: none;
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
+    background-color: #1572E8;
+}
+.sidebar {
+    .sidehead {
+        width: 250px;
+        height: 65px;
+        background-color: $color-blue;
+        float: left;
+        display: flex;
+        line-height: 14px;
+        position: fixed;
+        z-index: 1;
+        border-bottom: 1px solid rgba(202, 202, 202, 0.329);
+        border-right: 1px solid $color-white;
+
+        .sideheadText {
+            text-align: left;
+            font-size: $font-mid;
+            margin: 25px 0 0 25px;
+            color: $color-white;
+            font-family: 'Segoe UI', sans-serif;
+
+        }
+        .sidebarBtn {
+            text-align: right;
+            margin: 25px 20px 0 auto;
+            font-size: $font-small;
+            color: $color-white;
+            cursor: pointer;
+            display: none;
+        }
+        .userBtn {
+            text-align: right;
+            margin: 25px 20px 0 auto;
+            font-size: $font-small;
+            color: $color-white;
+            cursor: pointer;
+            display: none;
+        }
+    }
+    .sidebody {
+        width: 250px;
+        height: 100vh;
+        min-height: 100%;
+        float: left;
+        background-color: $color-blue;
+        color: $color-white;
+        overflow-y: auto;
+        display: block;
+        position: fixed;
+        border-right: 1px solid $color-white;
+        .userContent {
+            border-top: 1px solid $color-white;
+            .userBlock {
+                border-bottom: 1px solid rgba(202, 202, 202, 0.329);
+                margin-top: 75px;
+                .userImgBlock {
+                    float: left;
+                    margin-left: 10px;
+                    .userImg {
+                        width: 50px;
+                        margin-right: 10px;
+                        margin-left: 10px;
+                    }
+                }
+                .userTextBlock {
+                    margin-left: 50px;
+                    .adminText {
+                        font-family: 'Segoe UI', sans-serif;
+                    }
+                    .userText {
+                        margin-top: -8px;
+                    }
+                }
+            }
+            .basicToggleBlock {
+                display: flex;
+                padding: 5px;
+                border-radius: 5px;
+                cursor: pointer;
+                margin: 15px 10px 0 10px;
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.247);
+                }
+                .toggleIcon {
+                    margin: auto auto auto 10px;
+                    .basicIcon {
+                        font-size: $font-small;
+                        margin-top: 3px;
+                    }
+                }
+                .toggleText {
+                    font-size: $font-small;
+                    margin: auto auto auto -12px;
+                }
+                .mL-9 {
+                    margin-left: -9px;
+                }
+                .downIcon {
+                    line-height: $font-small;
+                    margin: auto;
+                }
+                .downIconSet {
+                    margin-left: 70px;
+                }
+            }
+        }
+        .toggleMenu {
+            text-align: center;
+            margin-left: auto;
+
+            li {
+                margin: 0 10px;
+                padding: 5px;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.247);
+                }
+            }
+
+        }
+    }
+}
+.contentBlock {
+    margin-left: 250px;
+    .rightImgBlock {
+        text-align: right;
+        padding-right: 20px;
+        padding-top: 10px;
+        margin-bottom: 30px;
+        .rightImg {
+            width: 50px;
+            cursor: pointer;
+        }
+    }
+    footer{
+        font-size: $font-small;
+        position: fixed;
+        right: 15px;
+        bottom: 20px;
+        color: $color-gray;
+    }
+}
+@media screen and (max-width: 768px) {
+    .sidebar {
+        .sidehead {
+            width: 100vw;
+            position: absolute;
+            .sideheadText {
+                margin: auto;
+            }
+            .sidebarBtn {
+                position: absolute;
+                left: 25px;
+                display: block;
+            }
+            .userBtn {
+                display: block;
+                position: absolute;
+                right: 5px;
+            }
+        }
+        .sidebody {
+            padding-left: 0;
+            position: fixed;
+            margin-left: -250px;
+            // margin-top: -65px;
+            float: left;
+            .toggled {
+                padding-left: 250px;
+            }
+            .userContent {
+                border: 0px;
+                .userBlock{
+                    margin: 10px;
+                }
+            }
+        }
+    }
+    .contentBlock {
+        position: relative;
+        transition: 0.3s;
+        top: 65px;
+        margin-left: 0px;
+        .rightImgBlock {
+            width: 100vw;
+            right: 0;
+            top: 0;
+            padding:5px 0 ;
+            background-color:rgba(238, 238, 238, 0.7);
+            text-align: center;
+            display: none;
+            .rightImg {
+                width: 50px;
+            }
+        }
+    }
+}
+.rotate180{
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+// js用
+.toggledHead {
+    margin-left: 250px;
+    transition: 0.5s;
+}
