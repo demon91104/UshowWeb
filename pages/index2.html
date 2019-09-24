@@ -16,12 +16,12 @@
 
 <body>
   <div class="sidebar">
-    <div class="sidehead" :class="{'toggledHead':toggleMove}">
+    <div class="sidehead">
       <p class="sideheadText">Ushow</p>
-      <i class="fas fa-bars sidebarBtn" @click="toggleMove=!toggleMove"></i>
+      <i class="fas fa-bars sidebarBtn" @click="sidebarToggle"></i>
       <i class="fas fa-ellipsis-v userBtn" @click="userToggle"></i>
     </div>
-    <div class="sidebody" :class="{'toggleHead':toggleMove}">
+    <div class="sidebody">
       <div class="userContent">
         <div class="userBlock">
           <div class="userImgBlock">

@@ -8,7 +8,7 @@ var app = new Vue({
     },
     methods: {
         sidebarToggle() {
-            $('.contentBlock').toggleClass('toggledHead', 5000)
+            $('.sidehead,.sidebody,.contentBlock').toggleClass('toggledHead')
         },
         userToggle() {
             $('.rightImgBlock').slideToggle()

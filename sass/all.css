@@ -215,8 +215,6 @@
   }
   .contentBlock {
     position: relative;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
     top: 65px;
     margin-left: 0px;
   }
@@ -242,7 +240,8 @@
 }
 
 .toggledHead {
-  margin-left: 250px;
+  -webkit-transform: translate(250px, 0);
+          transform: translate(250px, 0);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }

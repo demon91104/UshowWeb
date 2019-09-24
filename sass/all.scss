@@ -198,7 +198,6 @@ $color-gray:#7B7B7B;
     }
     .contentBlock {
         position: relative;
-        transition: 0.3s;
         top: 65px;
         margin-left: 0px;
         .rightImgBlock {
@@ -221,6 +220,8 @@ $color-gray:#7B7B7B;
 }
 // js用
 .toggledHead {
-    margin-left: 250px;
+    // left: 250px;
+    transform:translate(250px,0);
     transition: 0.5s;
 }
+
