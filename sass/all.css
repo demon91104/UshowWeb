@@ -47,7 +47,6 @@
   text-align: left;
   margin: 25px 0 0 25px;
   color: #fff;
-  font-family: 'Segoe UI', sans-serif;
 }
 
 .sidebar .sidehead .sidebarBtn {
@@ -143,12 +142,13 @@
 }
 
 .sidebar .sidebody .toggleMenu li {
-  margin: 0 10px;
-  padding: 10px 0 10px 50px;
+  margin: 0 10px 0 10px;
+  padding: 10px 0 10px 40px;
   border-radius: 5px;
   letter-spacing: 3px;
+  line-height: 22.5px;
+  list-style-position: inside;
   cursor: pointer;
-  list-style-type: disc;
 }
 
 .sidebar .sidebody .toggleMenu li:hover {
