@@ -214,11 +214,11 @@ $color-gray:#7B7B7B;
         }
     }
 }
+// js用
 .rotate180{
     transform: rotate(180deg);
     transition: 0.5s;
 }
-// js用
 .toggledHead {
     // left: 250px;
     transform:translate(250px,0);

@@ -21,8 +21,8 @@ $('.basicToggleBlock').click(function () {
 })
 $(function () {
     $("[data-toggle='popover']").popover({
-        title: '<button type="button">123</button>',
-         content: "Blabla <br> <h2>Cool stuff!</h2>",
+        title: '',
+        content: '<a class="btn btn-primary" href="#">Logout</a>',
           html: true, 
           placement: "auto"
     });
