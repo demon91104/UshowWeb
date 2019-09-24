@@ -2,15 +2,29 @@
 * {
   margin: 0;
   padding: 0;
-  font-size: 14px;
-  list-style-type: none;
+  font-size: 15px;
+  font-family: '微軟正黑體';
 }
 
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 2px;
+  width: 8px;
+  background-color: #88b9f8;
+  border-radius: 6px;
+}
+
+/* 捲軸拉的軸軌的顏色 */
+::-webkit-scrollbar-thumb {
   background-color: #1572E8;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  border-radius: 6px;
+}
+
+.sidebar {
+  font-size: 22.5px;
 }
 
 .sidebar .sidehead {
@@ -31,7 +45,6 @@
 
 .sidebar .sidehead .sideheadText {
   text-align: left;
-  font-size: 25px;
   margin: 25px 0 0 25px;
   color: #fff;
   font-family: 'Segoe UI', sans-serif;
@@ -40,7 +53,6 @@
 .sidebar .sidehead .sidebarBtn {
   text-align: right;
   margin: 25px 20px 0 auto;
-  font-size: 18px;
   color: #fff;
   cursor: pointer;
   display: none;
@@ -49,7 +61,6 @@
 .sidebar .sidehead .userBtn {
   text-align: right;
   margin: 25px 20px 0 auto;
-  font-size: 18px;
   color: #fff;
   cursor: pointer;
   display: none;
@@ -92,10 +103,6 @@
   margin-left: 50px;
 }
 
-.sidebar .sidebody .userContent .userBlock .userTextBlock .adminText {
-  font-family: 'Segoe UI', sans-serif;
-}
-
 .sidebar .sidebody .userContent .userBlock .userTextBlock .userText {
   margin-top: -8px;
 }
@@ -104,10 +111,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 5px;
+  padding: 10px;
   border-radius: 5px;
   cursor: pointer;
-  margin: 15px 10px 0 10px;
+  margin: 5px 10px 0 10px;
 }
 
 .sidebar .sidebody .userContent .basicToggleBlock:hover {
@@ -119,38 +126,29 @@
 }
 
 .sidebar .sidebody .userContent .basicToggleBlock .toggleIcon .basicIcon {
-  font-size: 18px;
   margin-top: 3px;
 }
 
 .sidebar .sidebody .userContent .basicToggleBlock .toggleText {
-  font-size: 18px;
-  margin: auto auto auto -12px;
+  margin: auto auto auto -100px;
+  letter-spacing: 3px;
 }
 
-.sidebar .sidebody .userContent .basicToggleBlock .mL-9 {
-  margin-left: -9px;
+.sidebar .sidebody .userContent .basicToggleBlock .toggleTextSet {
+  margin-left: -60px;
 }
 
 .sidebar .sidebody .userContent .basicToggleBlock .downIcon {
-  line-height: 18px;
-  margin: auto;
-}
-
-.sidebar .sidebody .userContent .basicToggleBlock .downIconSet {
-  margin-left: 70px;
-}
-
-.sidebar .sidebody .toggleMenu {
-  text-align: center;
-  margin-left: auto;
+  line-height: 22.5px;
 }
 
 .sidebar .sidebody .toggleMenu li {
   margin: 0 10px;
-  padding: 5px;
+  padding: 10px 0 10px 50px;
   border-radius: 5px;
+  letter-spacing: 3px;
   cursor: pointer;
+  list-style-type: disc;
 }
 
 .sidebar .sidebody .toggleMenu li:hover {
@@ -174,7 +172,7 @@
 }
 
 .contentBlock footer {
-  font-size: 18px;
+  font-size: 15px;
   position: fixed;
   right: 15px;
   bottom: 20px;
