@@ -24,6 +24,7 @@
   line-height: 14px;
   position: fixed;
   z-index: 1;
+  padding-right: 1px;
   border-bottom: 1px solid rgba(202, 202, 202, 0.329);
   border-right: 1px solid #fff;
 }
@@ -184,6 +185,7 @@
   .sidebar .sidehead {
     width: 100vw;
     position: absolute;
+    border: 0px;
   }
   .sidebar .sidehead .sideheadText {
     margin: auto;
