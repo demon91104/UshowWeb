@@ -15,7 +15,7 @@
 
 /* 捲軸拉的軸軌的顏色 */
 ::-webkit-scrollbar-thumb {
-  background-color: #1572E8;
+  background-color: #00558F;
   border-radius: 6px;
 }
 
@@ -30,7 +30,7 @@
 .sidebar .sidehead {
   width: 250px;
   height: 65px;
-  background-color: #1572E8;
+  background-color: #00558F;
   float: left;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -70,7 +70,7 @@
   height: 100vh;
   min-height: 100%;
   float: left;
-  background-color: #1572E8;
+  background-color: #00558F;
   color: #fff;
   overflow-y: auto;
   position: fixed;
@@ -79,6 +79,7 @@
 .sidebar .sidebody .userContent .userBlock {
   border-bottom: 1px solid rgba(202, 202, 202, 0.329);
   margin-top: 75px;
+  margin-bottom: 20px;
 }
 
 .sidebar .sidebody .userContent .userBlock .userImgBlock {
@@ -107,7 +108,7 @@
   padding: 10px;
   border-radius: 6px;
   cursor: pointer;
-  margin: 5px 10px 0 10px;
+  margin: 0px 10px 0 10px;
 }
 
 .sidebar .sidebody .userContent .basicToggleBlock:hover {
@@ -140,7 +141,7 @@
   padding: 8px 0 8px 40px;
   border-radius: 6px;
   letter-spacing: 3px;
-  line-height: 22.5px;
+  font-size: 14px;
   list-style-position: inside;
   cursor: pointer;
 }
