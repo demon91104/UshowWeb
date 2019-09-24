@@ -1,5 +1,5 @@
 var app = new Vue({
-    el: '.sidebar',
+    el: '#vue',
     data: {
         basicRotate: false,
         reportRotate: false,
@@ -7,9 +7,6 @@ var app = new Vue({
         toggleMove:false,
     },
     methods: {
-        sidebarToggle() {
-            $('.sidehead,.sidebody,.contentBlock').toggleClass('toggledHead')
-        },
         userToggle() {
             $('.rightImgBlock').slideToggle()
         }

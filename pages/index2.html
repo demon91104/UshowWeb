@@ -15,135 +15,137 @@
 </head>
 
 <body>
-  <div class="sidebar">
-    <div class="sidehead">
-      <p class="sideheadText">Ushow</p>
-      <i class="fas fa-bars sidebarBtn" @click="sidebarToggle"></i>
-      <i class="fas fa-ellipsis-v userBtn" @click="userToggle"></i>
-    </div>
-    <div class="sidebody">
-      <div class="userContent">
-        <div class="userBlock">
-          <div class="userImgBlock">
-            <img class="userImg" src="/source/user.png" alt="">
-          </div>
-          <div class="userTextBlock">
-            <p class="adminText">admin</p>
-            <p class="userText">營業人</p>
-          </div>
-        </div>
-        <div class="basicToggleBlock" @click="basicRotate=!basicRotate">
-          <div class="toggleIcon">
-            <i class="far fa-file-alt basicIcon"></i>
-          </div>
-          <p class="toggleText mL-9">基本資料</p>
-          <i class="fas fa-caret-down downIcon" :class="{'rotate180':basicRotate}"></i>
-        </div>
-        <ul class="toggleMenu">
-          <li>使用者</li>
-          <li>門市</li>
-          <li>收銀台</li>
-          <li>員工</li>
-          <li>商品類別</li>
-          <li>商品</li>
-          <li>口味</li>
-          <li>套餐</li>
-          <li>科目</li>
-          <li>價格標</li>
-        </ul>
-        <div class="basicToggleBlock" @click="reportRotate=!reportRotate">
-          <div class="toggleIcon">
-            <i class="fas fa-chart-line basicIcon"></i>
-          </div>
-          <p class="toggleText">報表</p>
-          <i class="fas fa-caret-down downIcon downIconSet" :class="{'rotate180':reportRotate}"></i>
-        </div>
-        <ul class="toggleMenu">
-          <li>使用者</li>
-          <li>門市</li>
-          <li>收銀台</li>
-          <li>員工</li>
-          <li>商品類別</li>
-          <li>商品</li>
-          <li>口味</li>
-          <li>套餐</li>
-          <li>科目</li>
-          <li>價格標</li>
-        </ul>
-        <div class="basicToggleBlock" @click="setRotate=!setRotate">
-          <div class="toggleIcon">
-            <i class="fas fa-cog basicIcon"></i>
-          </div>
-          <p class="toggleText">設定</p>
-          <i class="fas fa-caret-down downIcon downIconSet" :class="{'rotate180':setRotate}"></i>
-        </div>
-        <ul class="toggleMenu">
-          <li>使用者</li>
-          <li>門市</li>
-          <li>收銀台</li>
-          <li>員工</li>
-          <li>商品類別</li>
-          <li>商品</li>
-          <li>口味</li>
-          <li>套餐</li>
-          <li>科目</li>
-          <li>價格標</li>
-        </ul>
+  <div id="vue">
+    <div class="sidebar">
+      <div class="sidehead" :class="{'toggledHead':toggleMove}">
+        <p class="sideheadText">Ushow</p>
+        <i class="fas fa-bars sidebarBtn" @click="toggleMove=!toggleMove"></i>
+        <i class="fas fa-ellipsis-v userBtn" @click="userToggle"></i>
       </div>
-    </div>
-  </div>
-  <div class="contentBlock">
-    <div class="rightImgBlock">
-      <img class="rightImg" src="../source/user.png" alt="" data-container="body" data-toggle="popover"
-        data-img="../source/user.png/50x50" data-placement="bottom" data-content="">
-    </div>
-    <!-- 內容開始 -->
-    <div class="container-fluid pt-3">
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">@</span>
+      <div class="sidebody" :class="{'toggledHead':toggleMove}">
+        <div class="userContent">
+          <div class="userBlock">
+            <div class="userImgBlock">
+              <img class="userImg" src="/source/user.png" alt="">
+            </div>
+            <div class="userTextBlock">
+              <p class="adminText">admin</p>
+              <p class="userText">營業人</p>
+            </div>
+          </div>
+          <div class="basicToggleBlock" @click="basicRotate=!basicRotate">
+            <div class="toggleIcon">
+              <i class="far fa-file-alt basicIcon"></i>
+            </div>
+            <p class="toggleText mL-9">基本資料</p>
+            <i class="fas fa-caret-down downIcon" :class="{'rotate180':basicRotate}"></i>
+          </div>
+          <ul class="toggleMenu">
+            <li>使用者</li>
+            <li>門市</li>
+            <li>收銀台</li>
+            <li>員工</li>
+            <li>商品類別</li>
+            <li>商品</li>
+            <li>口味</li>
+            <li>套餐</li>
+            <li>科目</li>
+            <li>價格標</li>
+          </ul>
+          <div class="basicToggleBlock" @click="reportRotate=!reportRotate">
+            <div class="toggleIcon">
+              <i class="fas fa-chart-line basicIcon"></i>
+            </div>
+            <p class="toggleText">報表</p>
+            <i class="fas fa-caret-down downIcon downIconSet" :class="{'rotate180':reportRotate}"></i>
+          </div>
+          <ul class="toggleMenu">
+            <li>使用者</li>
+            <li>門市</li>
+            <li>收銀台</li>
+            <li>員工</li>
+            <li>商品類別</li>
+            <li>商品</li>
+            <li>口味</li>
+            <li>套餐</li>
+            <li>科目</li>
+            <li>價格標</li>
+          </ul>
+          <div class="basicToggleBlock" @click="setRotate=!setRotate">
+            <div class="toggleIcon">
+              <i class="fas fa-cog basicIcon"></i>
+            </div>
+            <p class="toggleText">設定</p>
+            <i class="fas fa-caret-down downIcon downIconSet" :class="{'rotate180':setRotate}"></i>
+          </div>
+          <ul class="toggleMenu">
+            <li>使用者</li>
+            <li>門市</li>
+            <li>收銀台</li>
+            <li>員工</li>
+            <li>商品類別</li>
+            <li>商品</li>
+            <li>口味</li>
+            <li>套餐</li>
+            <li>科目</li>
+            <li>價格標</li>
+          </ul>
         </div>
-        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-          aria-describedby="basic-addon1">
-      </div>
-
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
-          aria-describedby="basic-addon2">
-        <div class="input-group-append">
-          <span class="input-group-text" id="basic-addon2">@example.com</span>
-        </div>
-      </div>
-
-      <label for="basic-url">Your vanity URL</label>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-        </div>
-        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-      </div>
-
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text">$</span>
-        </div>
-        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-        <div class="input-group-append">
-          <span class="input-group-text">.00</span>
-        </div>
-      </div>
-
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text">With textarea</span>
-        </div>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
       </div>
     </div>
-    <!-- 內容結束 -->
-    <footer>
-      made By UShow
-    </footer>
+    <div class="contentBlock" :class="{'toggledHead':toggleMove}">
+      <div class="rightImgBlock">
+        <img class="rightImg" src="../source/user.png" alt="" data-container="body" data-toggle="popover"
+          data-img="../source/user.png/50x50" data-placement="bottom" data-content="">
+      </div>
+      <!-- 內容開始 -->
+      <div class="container-fluid pt-3">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">@</span>
+          </div>
+          <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+            aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
+            aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <span class="input-group-text" id="basic-addon2">@example.com</span>
+          </div>
+        </div>
+
+        <label for="basic-url">Your vanity URL</label>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+          </div>
+          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+          </div>
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+          <div class="input-group-append">
+            <span class="input-group-text">.00</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">With textarea</span>
+          </div>
+          <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+      </div>
+      <!-- 內容結束 -->
+      <footer>
+        made By UShow
+      </footer>
+    </div>
   </div>
 </body>
 
