@@ -35,12 +35,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  line-height: 14px;
   position: fixed;
   z-index: 1;
   padding-right: 1px;
   border-bottom: 1px solid rgba(202, 202, 202, 0.329);
-  border-right: 1px solid #fff;
 }
 
 .sidebar .sidehead .sideheadText {
@@ -50,6 +48,7 @@
 }
 
 .sidebar .sidehead .sidebarBtn {
+  position: absolute;
   text-align: right;
   margin: 25px 20px 0 auto;
   color: #fff;
@@ -58,6 +57,7 @@
 }
 
 .sidebar .sidehead .userBtn {
+  position: absolute;
   text-align: right;
   margin: 25px 20px 0 auto;
   color: #fff;
@@ -73,13 +73,7 @@
   background-color: #1572E8;
   color: #fff;
   overflow-y: auto;
-  display: block;
   position: fixed;
-  border-right: 1px solid #fff;
-}
-
-.sidebar .sidebody .userContent {
-  border-top: 1px solid #fff;
 }
 
 .sidebar .sidebody .userContent .userBlock {
@@ -111,7 +105,7 @@
   display: -ms-flexbox;
   display: flex;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
   margin: 5px 10px 0 10px;
 }
@@ -143,8 +137,8 @@
 
 .sidebar .sidebody .toggleMenu li {
   margin: 0 10px 0 10px;
-  padding: 10px 0 10px 40px;
-  border-radius: 5px;
+  padding: 8px 0 8px 40px;
+  border-radius: 6px;
   letter-spacing: 3px;
   line-height: 22.5px;
   list-style-position: inside;
@@ -189,13 +183,11 @@
     margin: auto;
   }
   .sidebar .sidehead .sidebarBtn {
-    position: absolute;
     left: 25px;
     display: block;
   }
   .sidebar .sidehead .userBtn {
     display: block;
-    position: absolute;
     right: 5px;
   }
   .sidebar .sidebody {
@@ -226,9 +218,6 @@
     background-color: rgba(238, 238, 238, 0.7);
     text-align: center;
     display: none;
-  }
-  .contentBlock .rightImgBlock .rightImg {
-    width: 50px;
   }
 }
 

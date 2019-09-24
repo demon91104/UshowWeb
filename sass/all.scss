@@ -1,9 +1,27 @@
 $font-mid: 15px;
 $font-big: $font-mid * 1.5;
 $font-small: $font-mid * 0.8;
+
 $color-white: #fff;
 $color-blue: #1572E8;
 $color-gray:#7B7B7B;
+
+$user-img-size:50px;
+$radius-size:6px;
+
+$letter-spacing-ul:3px;
+$sidebar-width:250px;
+$mobile-Head-height:65px;
+$user-line:1px solid rgba(202, 202, 202, 0.329);
+
+@mixin pc-icon-btn {
+    position: absolute;
+    text-align: right;
+    margin: 25px 20px 0 auto;
+    color: $color-white;
+    cursor: pointer;
+    display: none;
+}
 
 * {
     margin: 0;
@@ -16,74 +34,61 @@ $color-gray:#7B7B7B;
 ::-webkit-scrollbar {
     width: 8px;
     background-color: rgb(136, 185, 248);
-    border-radius: 6px;
+    border-radius: $radius-size;
 }
 
 /* 捲軸拉的軸軌的顏色 */
 ::-webkit-scrollbar-thumb {
     background-color: $color-blue;
-    border-radius: 6px;
+    border-radius: $radius-size;
 }
+
 ::-webkit-scrollbar-thumb:vertical {
-    border-radius: 6px;
+    border-radius: $radius-size;
 }
+
 .sidebar {
     font-size: $font-big;
 
     .sidehead {
-        width: 250px;
-        height: 65px;
+        width: $sidebar-width;
+        height: $mobile-Head-height;
         background-color: $color-blue;
         float: left;
         display: flex;
-        line-height: 14px;
         position: fixed;
         z-index: 1;
         padding-right: 1px;
-        border-bottom: 1px solid rgba(202, 202, 202, 0.329);
-        border-right: 1px solid $color-white;
+        border-bottom: $user-line;
 
         .sideheadText {
             text-align: left;
             margin: 25px 0 0 25px;
             color: $color-white;
-            // font-family: 'Segoe UI', sans-serif;
         }
 
         .sidebarBtn {
-            text-align: right;
-            margin: 25px 20px 0 auto;
-            color: $color-white;
-            cursor: pointer;
-            display: none;
+            @include pc-icon-btn;
         }
 
         .userBtn {
-            text-align: right;
-            margin: 25px 20px 0 auto;
-            color: $color-white;
-            cursor: pointer;
-            display: none;
+            @include pc-icon-btn;
         }
     }
 
     .sidebody {
-        width: 250px;
+        width: $sidebar-width;
         height: 100vh;
         min-height: 100%;
         float: left;
         background-color: $color-blue;
         color: $color-white;
         overflow-y: auto;
-        display: block;
         position: fixed;
-        border-right: 1px solid $color-white;
 
         .userContent {
-            border-top: 1px solid $color-white;
-
             .userBlock {
-                border-bottom: 1px solid rgba(202, 202, 202, 0.329);
+                border-bottom: $user-line;
                 margin-top: 75px;
 
                 .userImgBlock {
@@ -91,7 +96,7 @@ $color-gray:#7B7B7B;
                     margin-left: 10px;
 
                     .userImg {
-                        width: 50px;
+                        width: $user-img-size;
                         margin-right: 10px;
                         margin-left: 10px;
                     }
@@ -109,7 +114,7 @@ $color-gray:#7B7B7B;
             .basicToggleBlock {
                 display: flex;
                 padding: 10px;
-                border-radius: 5px;
+                border-radius: $radius-size;
                 cursor: pointer;
                 margin: 5px 10px 0 10px;
 
@@ -127,7 +132,7 @@ $color-gray:#7B7B7B;
 
                 .toggleText {
                     margin: auto auto auto -100px;
-                    letter-spacing: 3px;
+                    letter-spacing: $letter-spacing-ul;
                 }
 
                 .toggleTextSet {
@@ -143,13 +148,14 @@ $color-gray:#7B7B7B;
         .toggleMenu {
             li {
                 margin: 0 10px 0 10px;
-                padding: 10px 0 10px 40px;
-                border-radius: 5px;
-                letter-spacing: 3px;
+                padding: 8px 0 8px 40px;
+                border-radius: $radius-size;
+                letter-spacing: $letter-spacing-ul;
                 line-height: $font-big;
                 list-style-position: inside;
                 cursor: pointer;
-                &:hover{
+
+                &:hover {
                     background-color: rgba(255, 255, 255, 0.247);
                 }
             }
@@ -158,7 +164,7 @@ $color-gray:#7B7B7B;
 }
 
 .contentBlock {
-    margin-left: 250px;
+    margin-left: $sidebar-width;
 
     .rightImgBlock {
         text-align: right;
@@ -167,7 +173,7 @@ $color-gray:#7B7B7B;
         margin-bottom: 30px;
 
         .rightImg {
-            width: 50px;
+            width: $user-img-size;
             cursor: pointer;
         }
     }
@@ -193,14 +199,12 @@ $color-gray:#7B7B7B;
             }
 
             .sidebarBtn {
-                position: absolute;
                 left: 25px;
                 display: block;
             }
 
             .userBtn {
                 display: block;
-                position: absolute;
                 right: 5px;
             }
         }
@@ -208,12 +212,11 @@ $color-gray:#7B7B7B;
         .sidebody {
             padding-left: 0;
             position: fixed;
-            margin-left: -250px;
-            // margin-top: -65px;
+            margin-left: -($sidebar-width);
             float: left;
 
             .toggled {
-                padding-left: 250px;
+                padding-left: $sidebar-width;
             }
 
             .userContent {
@@ -228,7 +231,7 @@ $color-gray:#7B7B7B;
 
     .contentBlock {
         position: relative;
-        top: 65px;
+        top: $mobile-Head-height;
         margin-left: 0px;
 
         .rightImgBlock {
@@ -239,10 +242,6 @@ $color-gray:#7B7B7B;
             background-color: rgba(238, 238, 238, 0.7);
             text-align: center;
             display: none;
-
-            .rightImg {
-                width: 50px;
-            }
         }
     }
 }
@@ -254,6 +253,6 @@ $color-gray:#7B7B7B;
 }
 
 .toggledHead {
-    transform: translate(250px, 0);
+    transform: translate($sidebar-width, 0);
     transition: 0.5s;
 }
