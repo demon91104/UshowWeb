@@ -91,7 +91,7 @@ $user-line:1px solid rgba(202, 202, 202, 0.329);
         .userContent {
             .userBlock {
                 border-bottom: $user-line;
-                margin-top: 75px;
+                margin-top: 80px;
                 margin-bottom: 20px;
                 transition: 0.5s;
 
@@ -227,7 +227,7 @@ $user-line:1px solid rgba(202, 202, 202, 0.329);
                 border: 0px;
 
                 .userBlock {
-                    margin: 10px;
+                    margin-top: 20px;
                 }
             }
         }
