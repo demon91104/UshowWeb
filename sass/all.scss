@@ -14,6 +14,7 @@ $sidebar-width:250px;
 $mobile-Head-height:65px;
 $user-line:1px solid rgba(202, 202, 202, 0.329);
 
+$animate-time:0.5s;
 @mixin pc-icon-btn {
     position: absolute;
     text-align: right;
@@ -60,7 +61,7 @@ $user-line:1px solid rgba(202, 202, 202, 0.329);
         z-index: 1;
         padding-right: 1px;
         border-bottom: $user-line;
-        transition: 0.5s;
+        transition: $animate-time;
 
         .sideheadText {
             text-align: left;
@@ -78,7 +79,7 @@ $user-line:1px solid rgba(202, 202, 202, 0.329);
     }
 
     .sidebody {
-        transition: 0.5s;
+        transition: $animate-time;
         width: $sidebar-width;
         height: 100vh;
         min-height: 100%;
@@ -93,7 +94,7 @@ $user-line:1px solid rgba(202, 202, 202, 0.329);
                 border-bottom: $user-line;
                 margin-top: 80px;
                 margin-bottom: 20px;
-                transition: 0.5s;
+                transition: $animate-time;
 
                 .userImgBlock {
                     float: left;
@@ -145,7 +146,7 @@ $user-line:1px solid rgba(202, 202, 202, 0.329);
 
                 .downIcon {
                     line-height: $font-big;
-                    transition: 0.5s;
+                    transition: $animate-time;
                 }
             }
         }
