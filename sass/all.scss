@@ -60,6 +60,7 @@ $user-line:1px solid rgba(202, 202, 202, 0.329);
         z-index: 1;
         padding-right: 1px;
         border-bottom: $user-line;
+        transition: 0.5s;
 
         .sideheadText {
             text-align: left;
@@ -77,6 +78,7 @@ $user-line:1px solid rgba(202, 202, 202, 0.329);
     }
 
     .sidebody {
+        transition: 0.5s;
         width: $sidebar-width;
         height: 100vh;
         min-height: 100%;
@@ -91,6 +93,8 @@ $user-line:1px solid rgba(202, 202, 202, 0.329);
                 border-bottom: $user-line;
                 margin-top: 75px;
                 margin-bottom: 20px;
+                transition: 0.5s;
+
                 .userImgBlock {
                     float: left;
                     margin-left: 10px;
@@ -141,6 +145,7 @@ $user-line:1px solid rgba(202, 202, 202, 0.329);
 
                 .downIcon {
                     line-height: $font-big;
+                    transition: 0.5s;
                 }
             }
         }
@@ -214,7 +219,6 @@ $user-line:1px solid rgba(202, 202, 202, 0.329);
             position: fixed;
             margin-left: -($sidebar-width);
             float: left;
-
             .toggled {
                 padding-left: $sidebar-width;
             }
@@ -249,10 +253,8 @@ $user-line:1px solid rgba(202, 202, 202, 0.329);
 // js用
 .rotate180 {
     transform: rotate(180deg);
-    transition: 0.5s;
 }
 
 .toggledHead {
     transform: translate($sidebar-width, 0);
-    transition: 0.5s;
 }
