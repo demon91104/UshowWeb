@@ -4,7 +4,7 @@ var app = new Vue({
         basicRotate: false,
         reportRotate: false,
         setRotate: false,
-        toggleMove:false,
+        toggleMove: false,
     },
     methods: {
         userToggle() {
@@ -23,7 +23,7 @@ $(function () {
     $("[data-toggle='popover']").popover({
         title: '',
         content: '<a class="btn btn-primary" href="#">Logout</a>',
-          html: true, 
-          placement: "auto"
+        html: true,
+        placement: "auto"
     });
 });

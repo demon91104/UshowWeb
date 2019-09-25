@@ -9,7 +9,7 @@
 }
 
 body {
-  font-size: 14px;
+  font-size: 15px;
   font-family: 'PingFang SC';
   -webkit-user-select: none;
 }
@@ -40,14 +40,14 @@ body {
 }
 
 .whitebox .ushowImg {
-  padding-top: 35px;
+  padding-top: 22.5px;
   text-align: center;
 }
 
 .whitebox .ushowImg .ushowText {
   font-family: 'Segoe UI',sans-serif;
   color: #7B7B7B;
-  font-size: 35px;
+  font-size: 37.5px;
   font-weight: bold;
 }
 
@@ -78,7 +78,8 @@ body {
 .whitebox .signIn .signInText {
   color: #fff;
   font-weight: bold;
-  font-size: 18px;
+  margin-top: 1px;
+  font-size: 15px;
   font-family: 'Segoe UI',sans-serif;
 }
 /*# sourceMappingURL=login2.css.map */
